@@ -1,11 +1,14 @@
 from flask import Flask, request 
+from flask import make_response
 
 app = Flask(__name__)
 
 
 @app.route("/")
 def home():
-    return "<h1> Error :) </h1>", 400
+    response = make_response("hello :)")
+    response.set_cookie("jhon", "42")
+    return response
 
 
 
