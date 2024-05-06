@@ -7,12 +7,19 @@
         body{
             background-color: red;
         }
-        h1{
-            color: white;
-        }
     </style>
 </head>
 <body>
-    <h1>Wellcome To Web</h1>
+    {% if user %}
+        {{user}}
+    {% else %}
+        Welcome
+    {% endif %}
+    {% for i in commit %}
+        <ul>
+            <li>{{i}}</li>
+        </ul>
+    {% endfor %}
+    
 </body>
 </html>
