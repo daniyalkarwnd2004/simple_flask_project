@@ -6,10 +6,6 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("index.html")
-
-
-@app.route("/<username>")
-def user(username):
-    return render_template("userstyle.html", username = username)
-
+    user = "dani"
+    commit = ["welcome", "hello", "good"]
+    return render_template("index.html", user=user, commit=commit)
