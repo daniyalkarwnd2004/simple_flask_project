@@ -1,20 +1,24 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        h1{
+            color: white;
+        }
         body{
-            background-color: red;
+            background-color: rgb(53, 53, 255);
+        }
+
+        ul{
+            color: green;
         }
     </style>
 </head>
 <body>
-    {% extends "base.html"%}
-    {% block body%}
-    <h1>welcome</h1>
-    {% include "userstyle.html"%}
+    {% block body %}
     {% endblock %}
-
 </body>
 </html>
