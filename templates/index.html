@@ -10,16 +10,6 @@
     </style>
 </head>
 <body>
-    {% if user %}
-        {{user}}
-    {% else %}
-        Welcome
-    {% endif %}
-    {% for i in commit %}
-        <ul>
-            <li>{{i}}</li>
-        </ul>
-    {% endfor %}
-    
+    {% include 'userstyle.html' %}
 </body>
 </html>
