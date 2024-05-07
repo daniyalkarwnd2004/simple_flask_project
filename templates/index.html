@@ -9,7 +9,11 @@
 <body>
     {% extends "base.html" %}
     {% block content %}
-        <h1 style="color: black;">hello {{name}}</h1>
+        {% if name %}
+            <h1 style="color: black;">hello {{name}}</h1>
+        {% else %}
+            <h1 style="color: black;">welcome</h1>
+        {% endif %}
     {% endblock %}
 </body>
 </html>
