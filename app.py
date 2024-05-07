@@ -7,8 +7,7 @@ app = Flask(__name__)
 Bootstrap = Bootstrap(app)
 
 
-@app.route("/")
-def home():
-    user = "dani"
-    commit = ["welcome", "hello", "good"]
-    return render_template("index.html", user=user, commit=commit)
+@app.route("/<name>")
+def home(name):
+    user = name
+    return render_template("index.html", name = user)
