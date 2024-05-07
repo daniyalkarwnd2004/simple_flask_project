@@ -4,17 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
-            background-color: red;
-        }
     </style>
 </head>
 <body>
-    {% extends "base.html"%}
-    {% block body%}
-    <h1>welcome</h1>
-    {% include "userstyle.html"%}
+    {% extends "base.html" %}
+    {% block content %}
+        <h1 style="color: black;">hello {{name}}</h1>
     {% endblock %}
-
 </body>
 </html>
