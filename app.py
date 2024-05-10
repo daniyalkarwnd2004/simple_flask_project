@@ -1,27 +1,22 @@
+from os import name
 from flask import Flask
 from flask import render_template
 from flask_bootstrap import Bootstrap
-
+from flask import url_for
 
 
 app = Flask(__name__)
 Bootstrap = Bootstrap(app)
 
-
-@app.route("/")
+@app.route('/')
 def home():
-    return render_template("index.html")
+    return "gggg"
 
-@app.route("/<name>")
-def username(name):
-    user = name
-    return render_template("index.html", name = user)
 
-@app.errorhandler(404)
-def error404(e):
-    return render_template("404.html"),404
+@app.route("/user/<name>")
+def user(name):
+    return f"welcome {name}"
 
-@app.errorhandler(500)
-def error500(e):
-    return render_template("500.html"),500
-
+with app.test_request_context():
+    print(url_for('home'))
+    print(url_for('user', name=name))
