@@ -14,8 +14,12 @@ def home():
 
 
 @app.route("/<name>")
-def user():
-    return render_template("index.html")
+def user(name):
+    return render_template("index.html" , name=name)
+
+@app.errorhandler(404)
+def error(e):
+    return render_template("404.html"), 404
 
 if __name__ == 'main':
     app.run(debug=True)
