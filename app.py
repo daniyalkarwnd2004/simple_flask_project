@@ -10,13 +10,13 @@ Bootstrap = Bootstrap(app)
 
 @app.route('/')
 def home():
-    return "gggg"
+    return render_template("index.html")
 
 
-@app.route("/user/<name>")
-def user(name):
-    return f"welcome {name}"
+@app.route("/<name>")
+def user():
+    return render_template("index.html")
 
-with app.test_request_context():
-    print(url_for('home'))
-    print(url_for('user', name=name))
+if __name__ == 'main':
+    app.run(debug=True)
+
