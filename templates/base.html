@@ -5,60 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .link{
-            margin-top: 50%;
-            font-size: 24px;
-            color: white;
-            padding: 15px;
-            text-decoration: none;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        .navbar{
+            background-color: black;
+            width: 100%;
+            height: 40px;
+            border-radius: 15px;
         }
-        .link:hover{
-            color: red;
+        .link{
+            text-decoration: none;
+            color: rgb(246, 242, 242);
+            padding: 20px;
+            margin-top: 50px;
         }
         .footer{
-            margin-top: 40%;
+            width: 100%;
+            height: 200px;
+            margin-top: auto;
             background-color: black;
             color: white;
-            font-size: 20px;
-            border-radius: 10px;
-            padding: 10px;
-        }
-        a{
-            text-decoration: none;
-            color: white;
-            font-size: 20px;
-            padding: 10px;
+            padding-left: 15px;
+            border-radius: 20px;
+            padding-top:15px ;
         }
     </style>
 </head>
 <body>
     {% block navbar %}
-    
-    <div style="height: 10%; width: 100%; background-color: rgb(20, 19, 19); border-radius: 10px;">
-        <a style="margin-top: 50px;" class="link" href="/">home</a>
-        <a class="link" href="/" id="flask">flask</a>
-        <a class="link" href="/">education</a>
-        <a class="link" href="/">about us</a>
-    </div>
+        <div class="navbar">
+            <a class="link" href="/home">HOME</a>
+            <a class="link" href="/aboutus">ABOUT US</a>
+            <a class="link" style="font-size: 20px;" href="/usersystemprofile">user system profile</a>
+            <a class="link" style="font-size: 20px;" href="/comments">comments</a>
+        </div>
     {% endblock %}
-    {% block head %}
-    <link rel="stylesheet" href="../static/style.css">
-    <script src="../static/error.js"></script>
-    {% endblock %}
-
     {% block content %}
 
     {% endblock %}
-
     {% block footer %}
-        <div class="footer">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis dolorem mollitia maiores, rem illo similique.</p>
-            <a href="mailto:karwnddaniyal@gmail.com">karwnddaniyal@gmail.com</a>
-            <br>
-            <a href="tel:09931805649">09931805649</a>
+        <hr>
+        <div class="footer">  
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, voluptate vel harum ea possimus modi dolor nisi atque rem dolorum in molestiae excepturi, iure libero beatae quidem quaerat saepe porro dicta tempora repudiandae repellat. Odit libero delectus architecto saepe fuga nulla natus reprehenderit deserunt voluptate distinctio. Alias, et. Perspiciatis, modi?</p>
+        <br>
+        <a class="link" href="tel:+9931805649">09931805649</a>
+        <br>
+        <a class="link" href="maileto:daniyalkarwnd@gmail.com">daniyalkarwnd@gmail.com</a>
         </div>
     {% endblock %}
-    
+    {% block scripts %}
+    {{ moment.include_moment() }}   
+    {% endblock %}
 </body>
 </html>
