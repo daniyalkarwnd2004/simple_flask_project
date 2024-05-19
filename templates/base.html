@@ -19,13 +19,13 @@
         }
         .footer{
             width: 100%;
-            height: 200px;
+            height: 100px;
             margin-top: auto;
             background-color: black;
             color: white;
             padding-left: 15px;
             border-radius: 20px;
-            padding-top:15px ;
+            margin-top:50% ;
         }
     </style>
 </head>
@@ -38,6 +38,7 @@
             <a class="link" style="font-size: 20px;" href="/comments">comments</a>
         </div>
     {% endblock %}
+
     {% block content %}
 
     {% endblock %}
@@ -45,14 +46,6 @@
         <hr>
         <div class="footer">  
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, voluptate vel harum ea possimus modi dolor nisi atque rem dolorum in molestiae excepturi, iure libero beatae quidem quaerat saepe porro dicta tempora repudiandae repellat. Odit libero delectus architecto saepe fuga nulla natus reprehenderit deserunt voluptate distinctio. Alias, et. Perspiciatis, modi?</p>
-        <br>
-        <a class="link" href="tel:+9931805649">09931805649</a>
-        <br>
-        <a class="link" href="maileto:daniyalkarwnd@gmail.com">daniyalkarwnd@gmail.com</a>
-        </div>
-    {% endblock %}
-    {% block scripts %}
-    {{ moment.include_moment() }}   
     {% endblock %}
 </body>
 </html>
