@@ -37,19 +37,23 @@
                 {% if name %}
                     <h1>Hello {{name}}</h1>
                 {% else %}
-                    <h1>Stranger</h1>
+                    <h1>Hello</h1>
                 {% endif %}
             </div>
             <form action="" method="post" novalidate>
                 <br>
                 {{form.hidden_tag()}}
                 {{form.name.label(id="label_text") }}
+                {% for error in form.name.errors %}
+                    <span style="color: red;">{{error}}</span>
+                {% endfor %}
                 <br>
                 {{form.name(id="text_filde")}}
                 <br>
-                <br>
                 {{form.submit(id="sut")}}
+
+                <br>
             </form>
-    {% endblock %}
+        {% endblock %}
 </body>
 </html>
