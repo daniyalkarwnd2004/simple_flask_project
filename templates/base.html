@@ -6,46 +6,68 @@
     <title>Document</title>
     <style>
         .navbar{
-            background-color: black;
             width: 100%;
-            height: 40px;
+            height: 50px;            
+            background-color: rgb(0, 0, 0);
+            justify-content: center;
+            text-align: center;
+            display: flex;
             border-radius: 15px;
         }
-        .link{
+        a{
             text-decoration: none;
-            color: rgb(246, 242, 242);
-            padding: 20px;
-            margin-top: 50px;
+            color: rgb(162, 161, 161);
+            font-size: 20px;
+            margin:15px;
+        }
+        .imag{
+            margin-top: 10px;
+            width: 100%;
+            height: 50px;
         }
         .footer{
-            width: 100%;
-            height: 100px;
-            margin-top: auto;
+            height: 200px;
             background-color: black;
-            color: white;
-            padding-left: 15px;
-            border-radius: 20px;
-            margin-top:50% ;
+            margin-top: auto;
+            border-radius: 15px;
+            padding: 15px;
         }
     </style>
 </head>
 <body>
     {% block navbar %}
         <div class="navbar">
-            <a class="link" href="/home">HOME</a>
-            <a class="link" href="/aboutus">ABOUT US</a>
-            <a class="link" style="font-size: 20px;" href="/usersystemprofile">user system profile</a>
-            <a class="link" style="font-size: 20px;" href="/comments">comments</a>
+            <a href="/remex">آهنگ های ریمیکس</a>
+            <a href="/special">آهنگ های ویژه</a>
+            <a href="/song">آهنگ شاد</a>
+            <a href="/">آهنگ جدید</a>
         </div>
-    {% endblock %}
-
-    {% block content %}
-
-    {% endblock %}
-    {% block footer %}
+        <div class="imag">
+            <img src="{{url_for('static', filename='mosic.png')}}" alt="">
+        </div>
+        <br>
+        <br>
+        <br>
+        {% block scripts %}
+        {{ moment.include_moment() }}
+        {% endblock %}
+        <br>
         <hr>
-        <div class="footer">  
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, voluptate vel harum ea possimus modi dolor nisi atque rem dolorum in molestiae excepturi, iure libero beatae quidem quaerat saepe porro dicta tempora repudiandae repellat. Odit libero delectus architecto saepe fuga nulla natus reprehenderit deserunt voluptate distinctio. Alias, et. Perspiciatis, modi?</p>
+    {% endblock %}
+
+    {% block content  %}
+
+    {% endblock %}
+    <br>
+    {% block footer %}
+    <div class="footer">
+        <p style="color: white; font-size: 15px;">ما از حریم خوصوصی شما حفاظت میکنیم</p>
+        <p style="color: white; font-size: 15px;">راه های ارتباطی با ما</p>
+        <a href="mailt:karwnddaniyal@gmail.com">karwnddaniyal@gmail.com</a>
+        <br>
+        <a href="tel:+9931805649">09931805649</a>
+        
+    </div>
     {% endblock %}
 </body>
 </html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        .lift, .right{
+            display: flex;
+            box-sizing: border-box;
+            padding: 40px;
+        }
+        .lift{
+            flex: 0.8;
+        }
+        .right{
+            flex: 0.2;
+        }
+        a{
+            color: white;
+            font-size: 25px;
+        }
+        details{
+            margin-right: 40px;           
+        }
+        h1{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-right: 40px;
+            font-size: 18px;
+        }
+        p{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-right: 40px;
+            font-size: 12px;
+        }
+        ul{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 17px;
+        }
+        .list_pop{
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    {% extends "base.html" %}
+    
+    {% block content  %}
+    <p>زمان ورود شما به سایت</p>  {{ moment(time).format('LLL') }}
+        <form action="/special" method="get, post" novalidate>
+            <div class="container">
+                <div class="right">
+                    <div >
+                        <video src="../static/IMG_5663.mp4" width="340" height="260" controls ></video>
+                        <br>
+                        <video src="../static/IMG_5664.mp4" width="320" height="240" controls ></video>
+                        <br>
+                        <video src="../static/e6f17e068a59115f37da58375154aed649411681-480p.mp4" width="320" height="240" controls ></video>
+                        <iframe src="https://sabzlearn.ir/" frameborder="0" width="250px" height="250px"></iframe>
+                    </div>
+                </div>
+                <div class="lift">
+                    <div style="width: 100%; justify-content: center;text-align: center;">
+                        <h1>آهنگ آی عروسک</h1>
+                        <p>آهنگ از  میثم ابراهیمی</p>
+                        <audio controls>
+                            <source src="../static/shad/Meysam Ebrahimi - Aroosak (128).mp3">
+                        </audio>
+                        <a style="color: black; font-size: 20px;" href="../static/shad/Meysam Ebrahimi - Aroosak (128).mp3" download="">دانلود</a>
+                        <details>
+                            <summary>متن آهنگ آی عروسک</summary>
+                            <p>یک یک دو دو هشت
+                                آه
+                                بعضی وقت ها بارونه که میشوره
+                                خورشید وامیسته تماشا میکنه
+                                ماه میشینه تشویق میکنه
+                                رعد و برق * خودش رو بیخود پاره میکنه
+                                اما گفتم که این بارونه که میشوره
+                                </p>
+                        </details>
+                        <br>
+                        <hr>
+                        <br>
+                        <h1>آهنگ گلی خانم</h1>
+                        <p>آهنگ از حمید هیراد </p>
+                        <audio controls>
+                            <source src="../static/shad/Hamid Hiraad - Khanoom Gol (128).mp3">
+                        </audio>
+                        <a style="color: black; font-size: 20px;" href="../static/shad/Hamid Hiraad - Khanoom Gol (128).mp3" download="">دانلود</a>
+                        <details>
+                            <summary>متن آهنگ گلی خانم </summary>
+                            <p>یک یک دو دو هشت
+                                آه
+                                بعضی وقت ها بارونه که میشوره
+                                خورشید وامیسته تماشا میکنه
+                                ماه میشینه تشویق میکنه
+                                رعد و برق * خودش رو بیخود پاره میکنه
+                                اما گفتم که این بارونه که میشوره
+                                </p>
+                        </details>
+                        <br>
+                        <hr>
+                        <br>
+                        <h1>آهنگ همیشگی</h1>
+                        <p>آهنگ از   شادمهر عقیلی</p>
+                        <audio controls>
+                            <source src="../static/shad/Shadmehr Aghili - Hamishegi.mp3">
+                        </audio>
+                        <a style="color: black; font-size: 20px;" href="../static/shad/Shadmehr Aghili - Hamishegi.mp3" download="">دانلود</a>
+                        <details>
+                            <summary>متن آهنگ همیشگی </summary>
+                            <p>یک یک دو دو هشت
+                                آه
+                                بعضی وقت ها بارونه که میشوره
+                                خورشید وامیسته تماشا میکنه
+                                ماه میشینه تشویق میکنه
+                                رعد و برق * خودش رو بیخود پاره میکنه
+                                اما گفتم که این بارونه که میشوره
+                                </p>
+                        </details>
+                        <br>
+                        <hr>
+                        <br>
+                        <h1>آهنگ بیت</h1>
+                        <p>آهنگ از احسان دریادل </p>
+                        <audio controls>
+                            <source src="../static/shad/Ehsan Daryadel - Beyt (320).mp3">
+                        </audio>
+                        <a style="color: black; font-size: 20px;" href="../static/shad/Ehsan Daryadel - Beyt (320).mp3" download="">دانلود</a>
+                        <details>
+                            <summary>متن آهنگ بیت </summary>
+                            <p>یک یک دو دو هشت
+                                آه
+                                بعضی وقت ها بارونه که میشوره
+                                خورشید وامیسته تماشا میکنه
+                                ماه میشینه تشویق میکنه
+                                رعد و برق * خودش رو بیخود پاره میکنه
+                                اما گفتم که این بارونه که میشوره
+                                </p>
+                        </details>
+                        <br>
+                        <hr>
+                        <br>
+                        <h1>آهنگ وقتی که بد میشم</h1>
+                        <p>آهنگ از   شادمهر عقیلی</p>
+                        <audio controls>
+                            <source src="../static/shad/Shadmehr Aghili - Vaghti Ke Bad Misham [320].mp3">
+                        </audio>
+                        <a style="color: black; font-size: 20px;" href="../static/shad/Shadmehr Aghili - Vaghti Ke Bad Misham [320].mp3" download="">دانلود</a>
+                        <details>
+                            <summary>متن آهنگ وقتی که بد میشم </summary>
+                            <p>یک یک دو دو هشت
+                                آه
+                                بعضی وقت ها بارونه که میشوره
+                                خورشید وامیسته تماشا میکنه
+                                ماه میشینه تشویق میکنه
+                                رعد و برق * خودش رو بیخود پاره میکنه
+                                اما گفتم که این بارونه که میشوره
+                                </p>
+                        </details>
+                        <br>
+                        <hr>
+                        <br>
+                        <h1>آهنگ غم گرفته همه کوچه های ما رو</h1>
+                        <p>آهنگ از امیر تتلو</p>
+                        <audio controls>
+                            <source src="../static/mosic/Gham_Gerefte_Hame_Koochehaye_Maro.mp3">
+                        </audio>
+                        <a style="color: black; font-size: 20px;" href="../static/mosic/Gham_Gerefte_Hame_Koochehaye_Maro.mp3" download="">دانلود</a>
+                        <details>
+                            <summary>متن آهنگ غم گرفته همه کوچه های ما رو</summary>
+                            <p>یک یک دو دو هشت
+                                آه
+                                بعضی وقت ها بارونه که میشوره
+                                خورشید وامیسته تماشا میکنه
+                                ماه میشینه تشویق میکنه
+                                رعد و برق * خودش رو بیخود پاره میکنه
+                                اما گفتم که این بارونه که میشوره
+                                </p>
+                        </details>
+                        <br>
+                        <hr>
+                        <br>
+                        <h1>آهنگ قطب شمال </h1>
+                        <p>آهنگ از فرزاد فرزین</p>
+                        <audio controls>
+                            <source src="../static/mosic/Farzad Farzin - Ghotbe Shomal.mp3">
+                        </audio>
+                        <a style="color: black; font-size: 20px;" href="../static/mosic/Farzad Farzin - Ghotbe Shomal.mp3" download="">دانلود</a>
+                        <details>
+                            <summary>متن آهنگ قظب شمال</summary>
+                            <p>یک یک دو دو هشت
+                                آه
+                                بعضی وقت ها بارونه که میشوره
+                                خورشید وامیسته تماشا میکنه
+                                ماه میشینه تشویق میکنه
+                                رعد و برق * خودش رو بیخود پاره میکنه
+                                اما گفتم که این بارونه که میشوره
+                                </p>
+                        </details>
+                        <br>
+                        <hr>
+                        <br>
+                        <h1>آهنگ آمین </h1>
+                        <p>آهنگ از یاس و آمین</p>
+                        <audio controls>
+                            <source src="../static/mosic/Yas - Amen 128.mp3">
+                        </audio>
+                        <a style="color: black; font-size: 20px;" href="../static/mosic/Yas - Amen 128.mp3" download="">دانلود</a>
+                        <details>
+                            <summary>متن آهنگ آمین</summary>
+                            <p>یک یک دو دو هشت
+                                آه
+                                بعضی وقت ها بارونه که میشوره
+                                خورشید وامیسته تماشا میکنه
+                                ماه میشینه تشویق میکنه
+                                رعد و برق * خودش رو بیخود پاره میکنه
+                                اما گفتم که این بارونه که میشوره
+                                </p>
+                        </details>
+                        <br>
+                        <hr>
+                        <br>
+                        <h1>آهنگ شاه بیت </h1>
+                        <p>آهنگ از آرش و مسیح</p>
+                        <audio controls>
+                            <source src="../static/mosic/Masih & Arash AP – Shah Beyt (128).mp3">
+                        </audio>
+                        <a style="color: black; font-size: 20px;" href="../static/mosic/Masih & Arash AP – Shah Beyt (128).mp3" download="">دانلود</a>
+                        <details>
+                            <summary>متن آهنگ شاه بیت</summary>
+                            <p>یک یک دو دو هشت
+                                آه
+                                بعضی وقت ها بارونه که میشوره
+                                خورشید وامیسته تماشا میکنه
+                                ماه میشینه تشویق میکنه
+                                رعد و برق * خودش رو بیخود پاره میکنه
+                                اما گفتم که این بارونه که میشوره
+                                </p>
+                        </details>
+                        <br>
+                        <hr>
+                        <br>
+
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </form href="/song">
+    {% endblock %}
+</body>
+</html>
